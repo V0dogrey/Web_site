@@ -1,3 +1,57 @@
 body {
-    background-color: gray;
+    margin: 0;
+    background-color: Gainsboro;
+}
+
+.logo {
+    margin: -70px -30px;
+    position: absolute;
+    font-size: 1500%;
+    color: grey;
+    z-index: -1;
+}
+
+header{
+    margin: 0 10%;
+    min-width: 150px;
+    background-color: LightSteelBlue;
+}
+
+.menu {
+    margin: 0;
+    display:flex;
+    list-style:none;
+    padding: 0;
+
+}
+.menu_item {
+    min-width: 150px;
+    margin: -1px 1px;
+    padding: 10px;
+    position:relative;
+    text-align: center;
+    font-size: 150%;
+
+}
+
+.menu_item:hover {
+    background-color: Aqua;
+}
+
+
+
+.menu_item:hover .sub_items{
+    color:green;
+    display:block;
+}
+
+.sub_items {
+    list-style:none;
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    padding:10px;
+    background:#2b2c31;
+
 }
