@@ -6,4 +6,4 @@ def news(request):
         'title': 'News',
         'body': 'Hello World!',
     }
-    return render(request, 'main/index.html', context=content)
+    return render(request, 'news/main_news.html', context=content)

@@ -8,7 +8,11 @@
 </head>
 <body>
     <div class="logo">{{ title }}</div>
-  {% block body %}
-  {% endblock %}
+    {% include "main/header.html" %}
+    <main>
+        {% block body %}
+        {% endblock %}
+    </main>
+
 </body>
 </html>
