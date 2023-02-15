@@ -3,4 +3,8 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(requset):
-    return render(requset, 'main/index.html')
+    content = {
+        'title': 'Main Page.',
+        'body': 'Hello World!1',
+    }
+    return render(requset, 'main/index.html', context=content)
