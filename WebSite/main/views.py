@@ -5,6 +5,6 @@ from django.shortcuts import render
 def index(requset):
     content = {
         'title': 'Main Page.',
-        'body': 'Hello World!1',
+        'body': 'Hello World!',
     }
     return render(requset, 'main/index.html', context=content)
