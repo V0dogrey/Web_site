@@ -24,6 +24,9 @@ header{
     padding: 0;
 
 }
+
+
+
 .menu_item {
     min-width: 150px;
     margin: -1px 1px;
@@ -31,27 +34,11 @@ header{
     position:relative;
     text-align: center;
     font-size: 150%;
-
+}
+.menu_item a {
+    text-decoration: none;
 }
 
 .menu_item:hover {
-    background-color: Aqua;
-}
-
-
-
-.menu_item:hover .sub_items{
-    color:green;
-    display:block;
-}
-
-.sub_items {
-    list-style:none;
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    padding:10px;
-    background:#2b2c31;
-
+    background-color: Lavender;
 }
