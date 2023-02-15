@@ -24,7 +24,9 @@ header{
     padding: 0;
 }
 
-
+.menu a {
+    text-decoration: none;
+}
 
 .menu_item {
     min-width: 150px;
@@ -35,9 +37,7 @@ header{
     font-size: 150%;
 }
 
-.menu_item a {
-    text-decoration: none;
-}
+
 
 .menu_item:hover {
     background-color: Lavender;
