@@ -6,10 +6,8 @@
 
 
 {% block body %}
-
-{% include "news/news_box.html" %}
-{% include "news/news_box.html" %}
-{% include "news/news_box.html" %}
-
+{% for el in news %}
+    {% include "news/news_box.html" %}
+{% endfor %}
 {% endblock %}
 
