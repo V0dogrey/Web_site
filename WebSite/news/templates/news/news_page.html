@@ -4,10 +4,14 @@
     {{ article.title }}
 {% endblock %}
 
-
+{% block logo %}
+    Reed
+{% endblock %}
 
 {% block body %}
-    <h1> {{ article.title }} </h1>
-    <p> {{ article.news_text }} </p>
-    <p> {{ article.date}} <p>
+    <div class="news_page">
+        <h1> {{ article.title }} </h1>
+        <p> {{ article.news_text }} </p>
+        <p class="date"> {{ article.date}} </p>
+    </div>
 {% endblock %}

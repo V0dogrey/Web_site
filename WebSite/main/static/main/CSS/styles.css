@@ -86,3 +86,20 @@ height: 80%;
 
 }
 
+.news_page{
+    margin: 0;
+    background-color: LightSteelBlue;
+}
+
+.news_page h1{
+text-align: right;
+margin: 10px;
+}
+.news_page p{
+text-indent: 80px;
+margin: 10px;
+}
+.news_page .date{
+text-align: right;
+margin: 10px;
+}

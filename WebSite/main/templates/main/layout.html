@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
 </head>
 <body>
-    <div class="logo">{{ title }}</div>
+    <div class="logo">{% block logo %} {% endblock %}</div>
     {% include "main/header.html" %}
     <main>
         {% block body %}
