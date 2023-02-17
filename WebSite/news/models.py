@@ -2,11 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class CommentsList(models.Model):
-    news_id = models.ForeignKey(Articles, on_delete=models.CASCADE)
-    user_name = models.CharField('Имя', max_length=50)
-    text = models.TextField('Комментарий', max_length=500)
-    date = models.DateTimeField('Дата')
+
 
 class Articles(models.Model):
     title = models.CharField('Название', max_length=50)
@@ -20,3 +16,9 @@ class Articles(models.Model):
     class Meta:
         verbose_name = "Новость"
         verbose_name_plural = "Новости"
+
+class CommentsList(models.Model):
+    news_id = models.ForeignKey(Articles, on_delete=models.CASCADE)
+    user_name = models.CharField('Имя', max_length=50)
+    text = models.TextField('Комментарий', max_length=500)
+    date = models.DateTimeField('Дата')
