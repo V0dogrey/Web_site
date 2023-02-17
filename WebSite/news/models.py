@@ -24,7 +24,7 @@ class CommentsList(models.Model):
     date = models.DateTimeField('Дата')
 
     def __str__(self):
-        return self.title
+        return str(self.news_id) + ": Пользователь: "  + self.user_name + ": " + self.text
 
     class Meta:
         verbose_name = "Комментарий"
