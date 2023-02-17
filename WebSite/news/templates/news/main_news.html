@@ -7,7 +7,9 @@
 
 {% block body %}
 {% for el in news %}
-    {% include "news/news_box.html" %}
+    <a class="clear_a" href="{% url 'news_id' el.id %}">
+        {% include "news/news_box.html" %}
+    </a>
 {% endfor %}
 {% endblock %}
 

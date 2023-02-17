@@ -26,6 +26,7 @@ header{
 
 .menu a {
     text-decoration: none;
+    color: inherit;
 }
 
 .menu_item {
@@ -43,6 +44,11 @@ header{
 
 main {
     margin: 30px 15%;
+}
+
+.clear_a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .news_box {
