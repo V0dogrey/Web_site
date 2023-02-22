@@ -6,5 +6,5 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.news, name='news'),
-    path('<int:pk>', views.News_page.as_view(), name='news_id')
+    path('<int:pk>', views.News_page.as_view(), name='news_id'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

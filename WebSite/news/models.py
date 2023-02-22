@@ -26,6 +26,7 @@ class CommentsList(models.Model):
     def __str__(self):
         return str(self.news_id) + ": Пользователь: "  + self.user_name + ": " + self.text
 
+
     class Meta:
         verbose_name = "Комментарий"
         verbose_name_plural = "Кометарии"

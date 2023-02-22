@@ -87,19 +87,41 @@ height: 80%;
 }
 
 .news_page{
+font-size: 120%;
     margin: 0;
     background-color: LightSteelBlue;
+    padding-bottom: 10px;
 }
 
 .news_page h1{
 text-align: right;
-margin: 10px;
+margin: 20px 30px;
 }
 .news_page p{
+text-align: justify;
 text-indent: 80px;
-margin: 10px;
+margin: 10px 30px;
+
 }
 .news_page .date{
 text-align: right;
-margin: 10px;
+}
+
+.comment_box {
+font-size: 120%;
+margin: 20px;
+padding: 5px 0 5px 0;
+background-color: LightSteelBlue;
+}
+
+.comment_box .user_name {
+margin: 0 30px ;
+text-align: right;
+}
+
+.comment_box p{
+text-align: justify;
+text-indent: 30px;
+padding: 0 30px;
+
 }

@@ -13,5 +13,13 @@
         <h1> {{ article.title }} </h1>
         <p> {{ article.news_text }} </p>
         <p class="date"> {{ article.date}} </p>
+
     </div>
+<div class="comments">
+    {% if comments %}
+        {% for el in comments %}
+            {% include "news/comment_box.html" %}
+            {% endfor %}
+    {% endif %}
+</div>
 {% endblock %}
