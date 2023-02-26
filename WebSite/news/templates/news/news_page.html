@@ -22,4 +22,10 @@
             {% endfor %}
     {% endif %}
 </div>
+<form action="{{ article.get_absolute_url }}" method="post">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <botton type="submit">Доба1вить</botton>
+    <input type="submit" value="Submit">
+</form>
 {% endblock %}
