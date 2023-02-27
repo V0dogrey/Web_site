@@ -25,8 +25,6 @@ class News_page(FormMixin, DetailView):
         context['form'] = self.get_form()
         return context
 
-    """https://stackoverflow.com/questions/45659986/django-implementing-a-form-within-a-generic-detailview"""
-
     def get_success_url(self):
         return reverse('news_id', kwargs={'pk': self.object.id})
 
