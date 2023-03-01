@@ -20,7 +20,6 @@ class News_page(FormMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['pkk'] = self.object.pk
         context['comments'] = CommentsList.objects.filter(news_id=self.object.pk)
         context['form'] = self.get_form()
         return context
@@ -45,15 +44,6 @@ class News_page(FormMixin, DetailView):
         # Save the comment to the database
         new_comment.save()
         return super(News_page, self).form_valid(form)
-
-
-
-
-
-
-
-
-
 
 
 def news(request):
