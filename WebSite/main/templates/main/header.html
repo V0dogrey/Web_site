@@ -3,7 +3,15 @@
         <ul class="menu">
             <a href="{% url 'main' %}"><li class="menu_item">Main</li></a>
             <a href="{% url 'news' %}"><li class="menu_item">News</li></a>
-            <a href="{% url 'register' %}"><li class="menu_item">Register</li></a>
+            <div class="profile">
+                {% if request.user.is_authenticated %}
+                    <a href="{% url 'logout' %}"><li class="menu_item">Logout</li></a>
+                    <a href="{% url 'profile' %}"><li class="menu_item">{{ user.username }}</li></a>
+                {% else %}
+                    <a href="{% url 'register' %}"><li class="menu_item">Register</li></a>
+                    <a href="{% url 'login' %}"><li class="menu_item">Login</li></a>
+                {% endif %}
+            </div>
 
         </ul>
     </nav>

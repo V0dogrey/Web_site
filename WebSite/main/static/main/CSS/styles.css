@@ -13,7 +13,7 @@ body {
 
 header{
     margin: 0 10%;
-    min-width: 150px;
+    min-width: 880px;
     background-color: LightSteelBlue;
 }
 
@@ -33,12 +33,22 @@ header{
     min-width: 150px;
     margin: -1px 1px;
     padding: 10px;
-    position:relative;
+
     text-align: center;
     font-size: 150%;
 }
 
 .menu_item:hover {
+    background-color: Lavender;
+}
+
+.profile {
+    display: flex;
+    margin-left: auto;
+}
+
+
+.menu_profile:hover {
     background-color: Lavender;
 }
 
