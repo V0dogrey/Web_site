@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -24,12 +25,12 @@ class Articles(models.Model):
 
 class CommentsList(models.Model):
     news_id = models.ForeignKey(Articles, on_delete=models.CASCADE)
-    user_name = models.CharField('Имя', max_length=50)
+    user_name = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.TextField('Комментарий', max_length=500)
     date = models.DateTimeField('Дата', null=True)
 
     def __str__(self):
-        return str(self.news_id) + ": Пользователь: "  + self.user_name + ": " + self.text
+        return str(self.news_id) + ": Пользователь: "  + str(self.user_name) + ": " + self.text
 
 
     class Meta:
