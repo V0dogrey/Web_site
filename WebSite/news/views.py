@@ -41,6 +41,7 @@ class News_page(FormMixin, DetailView):
         # Assign the current post to the comment
         new_comment.date = datetime.now()
         new_comment.news_id = self.object
+        new_comment.user_name = self.request.user
         # Save the comment to the database
         new_comment.save()
         return super(News_page, self).form_valid(form)

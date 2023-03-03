@@ -22,10 +22,13 @@
             {% endfor %}
     {% endif %}
 </div>
+{% if request.user.is_authenticated %}
 <form action="{{ article.get_absolute_url }}" method="post">
     {% csrf_token %}
     {{ form.as_ul }}
-    <botton type="submit">Доба1вить</botton>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Отправить">
 </form>
+{% else %}
+<p>Войдите что бы писать комментарии</p>
+{%  endif %}
 {% endblock %}
