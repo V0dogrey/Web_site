@@ -14,5 +14,6 @@
         {% include "news/news_box.html" %}
     </a>
 {% endfor %}
+{% include "news/pagination.html" with page=page_obj %}
 {% endblock %}
 

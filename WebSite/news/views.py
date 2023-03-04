@@ -2,7 +2,7 @@ from datetime import datetime
 
 from django.shortcuts import render
 from .models import Articles, CommentsList, reverse
-from django.views.generic import DetailView
+from django.views.generic import DetailView, ListView
 from .forms import AddCommentForm
 
 from django.views.generic.edit import FormMixin
@@ -47,10 +47,17 @@ class News_page(FormMixin, DetailView):
         return super(News_page, self).form_valid(form)
 
 
-def news(request):
+def news1(request):
     news = Articles.objects.order_by('-date')
     content = {
         'title': 'News',
         'news': news,
     }
     return render(request, 'news/main_news.html', context=content)
+
+class News(ListView):
+    queryset = Articles.objects.order_by('-date')
+    model = Articles
+    template_name = 'news/main_news.html'
+    paginate_by = 2
+    context_object_name = 'news'
