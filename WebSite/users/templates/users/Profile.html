@@ -9,5 +9,8 @@
 {% endblock %}
 
 {% block body %}
-    {{ User }}
+<p>Логин: {{ User }}</p>
+<div class="img_box"> <img src="{{ profile.avatar.url }}"></div>
+<p> День рождения: {{ profile.birthday }}</p>
+
 {% endblock %}

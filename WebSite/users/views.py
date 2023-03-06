@@ -7,6 +7,7 @@ from .forms import RegistrationForm
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
+from .models import UserPrifile
 
 # Create your views here.
 def users(request):
@@ -51,6 +52,8 @@ class UserProfile(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(UserProfile, self).get_context_data()
+        context['profile'] = UserPrifile.objects.get(user=self.object.pk)
+        print(UserPrifile.objects.get(user=self.object.pk))
         return context
 
 

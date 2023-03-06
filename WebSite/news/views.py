@@ -47,13 +47,13 @@ class News_page(FormMixin, DetailView):
         return super(News_page, self).form_valid(form)
 
 
-def news1(request):
+"""def news1(request):
     news = Articles.objects.order_by('-date')
     content = {
         'title': 'News',
         'news': news,
     }
-    return render(request, 'news/main_news.html', context=content)
+    return render(request, 'news/main_news.html', context=content)"""
 
 class News(ListView):
     queryset = Articles.objects.order_by('-date')

@@ -24,7 +24,7 @@ class Articles(models.Model):
         verbose_name_plural = "Новости"
 
 class CommentsList(models.Model):
-    news_id = models.ForeignKey(Articles, on_delete=models.CASCADE)
+    news_id = models.ForeignKey(Articles, on_delete=models.CASCADE, related_name='comments')
     user_name = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.TextField('Комментарий', max_length=500)
     date = models.DateTimeField('Дата', null=True)
